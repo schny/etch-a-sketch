@@ -45,6 +45,10 @@ clearBtn.addEventListener('click', function () {
         paintedGridItems[i].classList.remove('painted');
         paintedGridItems[i].style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
     }
+
+    eraserCheckbox = document.querySelector('#eraser');
+    eraserCheckbox.checked = false;
+    eraseTiles();
 });
 
 function changeColor (slider, item) {
@@ -136,6 +140,3 @@ function eraseTiles () {
     }
 
 }
-
-
-
