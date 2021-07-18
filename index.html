@@ -5,28 +5,29 @@
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
+    <div id="main">
         <div id="heading">etch-a-sketch</div>
         <p</p.>
-        <div id="column-1">
-            <input type="textfield" id="grid-size" placeholder="Enter grid size (4-50)">
-            <button id="clear">Clear</button>
-            <input type="checkbox" id="eraser">Eraser
-            <input type="color" id="pen">Pen color
-            <nav class="slider-control">
-                <input type="range" value="255" min="0" max="255" class="sliderbg" id="red">r
-                <input type="range" value="255" min="0" max="255" class="sliderbg" id="green">g
-                <input type="range" value="255" min="0" max="255" class="sliderbg" id="blue">b
-            
-            </nav>
-        </div>
-        <div id="column-2">
+
+        <div id="row-1">
             <div class="grid-container">
             </div>
         </div>
-
-        <script src="script.js"></script>
-        <!-- format BG color & pen color-->
-        <!-- toggle fade button -->
+        <div id="row-2">
+            <input type="textfield" id="grid-size" placeholder="Enter grid size (4-50)">
+            <nav class="slider-control">
+                <input type="range" value="255" min="0" max="255" class="sliderbg" id="red">
+                <input type="range" value="255" min="0" max="255" class="sliderbg" id="green">
+                <input type="range" value="255" min="0" max="255" class="sliderbg" id="blue">
+                background rgb(<b id="r">255</b>,<b id="g">255</b>,<b id="b">255</b>)
+            </nav>
+            <button id="clear">Clear</button>
+            <input type="checkbox" id="eraser">Eraser
+            <input type="color" id="pen">Pen
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
         
     </body>
 </html>

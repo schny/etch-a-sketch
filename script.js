@@ -54,11 +54,19 @@ clearBtn.addEventListener('click', function () {
 function changeColor (slider, item) {
     let input = document.querySelectorAll(slider);
 
+
     for (let i = 0; i < input.length; i++) {
         input[i].addEventListener('input', function () {
             let r = document.querySelector('#red').value;
             let g = document.querySelector('#green').value;
             let b = document.querySelector('#blue').value;
+            let showRed = document.querySelector('#r');
+            let showGreen = document.querySelector('#g');
+            let showBlue = document.querySelector('#b');
+
+            showRed.innerHTML = `${r}`;
+            showGreen.innerHTML = `${g}`;
+            showBlue.innerHTML = `${b}`;
             
             let gridColor = document.querySelectorAll(item);
             for (let i = 0; i < gridColor.length; i++) {
@@ -74,8 +82,9 @@ function changeColor (slider, item) {
 
 function createGrid (gridSize) {
 
-    let gridItemSize = (600 - (gridSize * 2)) / gridSize
-
+    let gridItemSize = ((462 - (gridSize * 2) - ((gridSize / 2))) + Math.floor(gridSize / 4)) / gridSize;
+    
+    
     for (let i = 0; i < gridSize; i++) {
 
         gridColumn = document.createElement('div');
@@ -91,6 +100,21 @@ function createGrid (gridSize) {
             gridItem.classList.add('grid-item');
             gridItem.style.width = `${gridItemSize}px`;
             gridItem.style.height = `${gridItemSize}px`;
+            
+            if (i == 0 && j == 0){
+                gridItem.style.borderRadius = '20px 0px 0px 0px';
+            }
+            else if (i == 0 && j == gridSize -1 ) {
+                gridItem.style.borderRadius = '0px 0px 0px 20px';
+            }
+            else if (i == gridSize - 1 && j == 0){
+                gridItem.style.borderRadius = '0px 20px 0px 0px';
+            }
+            else if (i ==gridSize -1 && j == gridSize - 1) {
+                gridItem.style.borderRadius = '0px 0px 20px 0px';
+            }
+            
+            
             let r = document.querySelector('#red').value;
             let g = document.querySelector('#green').value;
             let b = document.querySelector('#blue').value;

@@ -3,7 +3,7 @@ body {
     font-family: Arial;
 }
 .grid-container {
-  
+  width: 462px;
 }
 
 .grid-column {
@@ -14,61 +14,104 @@ body {
     border: 1px solid black;
 }
 
+#grid-size {
+    border-radius: 7px;
+}
 
+#clear {
+    border-radius: 7px;
+    background-color: rgb(34, 34, 34);
+    color: white;
+    padding: 4px;
+    border: 1px solid black;
+}
+
+#clear:hover {
+    border: 1px solid white;
+}
 
 input[type='range'] {
-    position: absolute;
-    top: 40%;
-    transform: rotate(270deg);
     -webkit-appearance: none;
     border: 3px solid black;
     align-items: center;
-    margin: 30px;
+   
 }
 
 
-#red, #sred {
-    background-color: rgb(194, 40, 40)
+#red {
+    background-color: rgb(194, 40, 40);
 }
 
-#green, #sgreen {
-    background-color: rgb(36, 192, 36)
+#red:hover{
+    background-color: rgb(206, 86, 86);
 }
 
-#blue, #sblue {
-    background-color: rgb(60, 60, 189)
+#green {
+    background-color: rgb(36, 192, 36);
+}
+
+#green:hover {
+    background-color: rgb(79, 197, 79);
+}
+
+#blue {
+    background-color: rgb(42, 42, 196);
+}
+
+#blue:hover{
+    background-color: rgb(86, 86, 202);
 }
 
 .slider-control {
     position: relative;
- 
-    height: 230px;
+    float: right;
     margin: 20px;
 }
 
 #heading {
+    font-family: cursive;
+    color: rgb(0, 0, 0);
+    position: relative;
     font-size: 50px;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
-#column-1 {
-    width: 250px;
-    float: left;
-    margin: 20px;
-    background-color: rgb(255, 74, 74);
+
+
+#row-1 {
+    
+    width: 462px;
+    height: 462px;
+    position: relative;
+    border-radius: 5%;
     padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid black;
+    background-color: rgb(255, 74, 74);
+
+}
+
+
+#row-2 {
+    display: block;
+    width: 484px;
+    height: 130px;
+    position: relative;
+    border-radius: 20px;
+    background-color: rgb(255, 74, 74);
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
     border: 5px solid black;
 }
 
-#column-2 {
-    width: 600px;
-    height: 600px;
-    float: left;
-    padding: 20px;
-    border: 5px solid black;
-    background-color: rgb(255, 74, 74);
-}
+
 
 #grid-size {
     margin: 5px;
@@ -80,4 +123,19 @@ input[type='range'] {
 
 #pen {
     margin: 5px;
+}
+
+#r {
+    color: rgb(255, 125, 125);
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#g {
+    color: rgb(82, 194, 82);
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#b {
+    color: rgb(129, 129, 255);
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
