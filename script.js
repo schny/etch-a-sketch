@@ -82,7 +82,9 @@ function changeColor (slider, item) {
 
 function createGrid (gridSize) {
 
-    let gridItemSize = ((462 - (gridSize * 2) - ((gridSize / 2))) + Math.floor(gridSize / 4)) / gridSize;
+    let gridItemSize = (462 - (gridSize * 2)) / gridSize;
+    
+    //let gridItemSize = ((462 - (gridSize * 2) - ((gridSize / 2))) + Math.floor(gridSize / 4)) / gridSize;
     
     
     for (let i = 0; i < gridSize; i++) {
